@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: #ffffff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding-top: 150px;
+        }
+
+        .conteudo {
+            background-color: #8cc2ff;
+            text-align: center;
+            border: solid 1px;
+            width: 400px;
+            border-radius: 20px;
+        }
+
+        span {
+            color: rgb(230, 103, 255);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="conteudo">
+        <h1>Minha Calculadora</h1>
+
+        <p>Primeiro Número</p>
+        <input id="n1" type="number">
+
+        <p>Segundo Número</p>
+        <input id="n2" type="number">
+
+        <br><br><br>
+
+        <button onclick="somar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="multiplicar()">x</button>
+        <button onclick="dividir()">/</button>
+
+        <h2>O resultado é <span></span></h2>
+    </div>
+    <script>
+
+        let n1 = document.querySelector('#n1');
+        let n2 = document.querySelector('#n2');
+        let resultado = document.querySelector('span')
+
+        function somar() {
+            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+        }
+
+        function subtrair() {
+            resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+        }
+
+        function multiplicar() {
+            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+        }
+
+        function dividir() {
+            resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+        }
+
+    </script>
+
+</body>
+
+</html>
